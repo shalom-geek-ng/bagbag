@@ -4,6 +4,7 @@
     margin: 0;
     list-style: none;
     box-sizing: border-box !important;
+ 
 }
 .carousel-header{
  font-family: var(--carouselheader);
@@ -19,11 +20,12 @@
 .contained {
     width: 90%;
     margin: auto;
+    overflow: hidden;
 }
 nav{
-   box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 5px 8px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 5px 8px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 5px 8px -7px rgba(0,0,0,0.75);
 }
 /* Nav-heading */
 .nav-heading{
@@ -38,7 +40,9 @@ nav{
 li {
     padding: 0px 20px !important;
 }
-
+.cart-heading.zero::before{
+    opacity: 1;
+}
 .carousel-item img {
     object-fit: cover;
     object-position: center;
@@ -78,10 +82,10 @@ li {
 }
 
 .box:hover {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);    
+    background-color: white;    
     cursor: pointer;
     transition: .3s;
+    padding: 0px;
   
 }
 
@@ -147,6 +151,7 @@ li {
 -webkit-box-shadow: 14px 9px 31px -1px rgba(0,0,0,0.16);
 -moz-box-shadow: 14px 9px 31px -1px rgba(0,0,0,0.16);
 }
+
 @media only screen and (max-width:576px) {
  .carousel-header{
     font-size: 30px !important;
@@ -176,10 +181,13 @@ li {
     font-size: 12px;
 }
 .counts-heading{
-    font-size: 18px;
+    font-size: 17px;
 }
 .counts-paragraph{
-    font-size: 10px;
+    font-size: 12px;
+}
+.discover-more-btn{
+    padding: 5px !important;
 }
 .chooose-btn{
     margin: auto !important;
@@ -200,15 +208,13 @@ li {
 }
 .product-font h1{
     font-size: 16px !important;
-    text-align: center !important;
+    
 }
 .product-font p{
     font-size: 13px !important;
-    text-align: center !important;
+    
 }
-.Choose-contained{
-    margin-bottom: 325px !important;
-}
+
 
 .customer-speech{
     font-size: 16px !important;
@@ -237,7 +243,21 @@ margin-bottom: 80px !important;
 .box-btn{
     margin: auto !important;
 }
-
+.rocken-container{
+    display: block !important;
+}
+.rocken-comment{
+    width: 100% !important;
+}
+.rocken-img{
+    width: 100% !important;
+}
+.rocken-comment h4{
+    text-align: center !important;
+}
+.cart-contained{
+    left: 8% !important; 
+}
 }
 @media only screen and (max-width:992px) {
     .box-btn{
@@ -251,4 +271,20 @@ margin-bottom: 80px !important;
        
         text-align: center !important;
     }
+    .chooose-btn{
+        margin: auto !important;
+    }
+    .discover-btn{
+        margin: auto !important;
+    }
+ .star-rating{
+    height: 350px !important;
+    margin-top: 10px !important;
+}
+.bag-article1{
+margin-bottom: 80px !important;
+}
+.cart-contained{
+    left: 6% !important; 
+}
 }
