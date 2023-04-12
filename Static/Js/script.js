@@ -18,23 +18,8 @@ valueDisplays.forEach((valueDisplays) => {
 // Cart
 
 
-  let cartCount = 0; // initialize the cart count to zero
-  let selectedObject = ""; // initialize the selected object to empty
-
-  // add event listeners to all "ADD TO CART" buttons
-  const addToCartButtons = document.querySelectorAll(".boxed-bottom-btn");
-  addToCartButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      cartCount++; // increment the cart count
-      selectedObject = button.parentNode.parentNode.querySelector(".boxed-bottom-text").textContent.trim(); // get the selected object text
-
-      // update the cart count and selected object text
-      const cartCountElem = document.querySelector(".cart-circle");
-      cartCountElem.textContent = cartCount;
-      const selectedObjectElem = document.querySelector("#selected-object");
-      selectedObjectElem.textContent = selectedObject;
-    });
-  });
+  
+  
 
 // Search
   const searchInput = document.querySelector('input[type="search"]');
@@ -56,4 +41,29 @@ valueDisplays.forEach((valueDisplays) => {
   });
   
 
+
+// Get the cart icon element and the cart contained button element
+const cartIcon = document.querySelector('#cart-icon');
+const cartContained = document.querySelector('.cart-contained');
+
+// Initialize the cart count to 0
+let cartCount = 0;
+
+// Add click event listeners to all the "Add to Cart" buttons
+const addToCartButtons = document.querySelectorAll('.boxed-bottom-btn');
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Increase the cart count
+    cartCount++;
+    
+    // Update the cart icon with the new count
+    cartContained.innerText = cartCount;
+    
+    // Add a visual indication to the cart icon
+    cartIcon.classList.add('faa-ring', 'animated');
+    setTimeout(() => {
+      cartIcon.classList.remove('faa-ring', 'animated');
+    }, 1000);
+  });
+});
 
